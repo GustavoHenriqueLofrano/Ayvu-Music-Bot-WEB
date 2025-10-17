@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.logoImage {
+  cursor: none;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.nav {
+  display: flex;
+  gap: 2.7rem;
+  font-size: 1.1rem;
+  margin-right: 8%;
+}
+
+.navLink {
+  color: white;
+  opacity: 0.9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 5%;
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+  }
+  
+  .nav {
+    gap: 1.2rem;
+  }
+  
+  .navLink {
+    font-size: 0.9rem;
+  }
+}
