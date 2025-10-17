@@ -5,7 +5,6 @@ import { FaDiscord} from "react-icons/fa"
 import styles from './page.module.css'
 import Magnet from '@/components/Magnet'
 import TextType from '@/components/TextType';
-import Header from '@/app/home/components/header/header'
 
 export default function Home() {
   return (

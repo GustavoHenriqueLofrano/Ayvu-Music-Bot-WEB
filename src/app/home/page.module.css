@@ -73,7 +73,7 @@
 .bot {
   font-weight: bold;
   background: linear-gradient(to right, #F72585, #3A0CA3, #7209B7);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
