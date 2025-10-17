@@ -90,14 +90,15 @@
   line-height: 1.6;
   max-width: 500px;
   padding: 40px;
-  padding-top: 15%;
+  padding-top: 18%;
   margin-left: 40px;
+  font-family: var(--font-roboto);
 
 }
 
 .textContent p {
   margin: 0 0 20px 0;
-  font-size: 2.1rem;
+  font-size: 2.2rem;
 }
 
 .bot {
@@ -125,7 +126,7 @@
 
 }
 .players{
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin-left: 20px;
   margin-top: 20px;

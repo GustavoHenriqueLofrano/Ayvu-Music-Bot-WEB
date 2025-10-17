@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import {Sniglet as FontSniglet } from "next/font/google";
+import {Sniglet as FontSniglet, Roboto  } from "next/font/google";
 import "./globals.css";
 import Header from "./home/components/header/header";
 import { Analytics } from "@vercel/analytics/next";
@@ -8,6 +8,12 @@ const sniglet = FontSniglet({
   weight: '400',
   subsets: ["latin"],
   variable: "--font-sviglet",
+});
+
+const roboto = Roboto({
+  weight: '400',
+  subsets: ["latin"],
+  variable: "--font-roboto",
 });
 
 
@@ -26,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${sniglet.variable} font-sans`}>
+      <body className={`${sniglet.variable} font-sans, ${roboto.variable} font-sans`}>
         <div className="mainContainer">
         <Header/>
         {children}

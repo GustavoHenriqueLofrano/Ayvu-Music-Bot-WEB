@@ -6,7 +6,7 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid rgba(248, 245, 245, 0.151);
 }
 .logoImage {
   cursor: none;

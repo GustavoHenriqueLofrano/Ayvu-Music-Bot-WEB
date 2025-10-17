@@ -1,11 +1,57 @@
 .container {
   min-height: 100vh;
   padding: 6rem 0 2rem;
-  background: linear-gradient(to bottom, #270479fb, #1a0633);
-  color: var(--foreground);
+  color: white;
   position: relative;
   z-index: 1;
   margin-top: 0;
+  overflow: hidden;
+  background: #0a0a1a;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.dotGridContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.dotGrid {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+.dotGridContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  background-image: radial-gradient(#ccc 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  background: transparent;
+  border-radius: 12px;
 }
 
 .background {
@@ -39,13 +85,15 @@
 }
 
 .commandItem {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--color2);
+  background: rgba(10, 10, 26, 0.7);
+  border: 1px solid grey;
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
   width: 100%;
   align-items: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .commandItem:hover {
@@ -67,12 +115,12 @@
 .commandName {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color4);
+  color: white;
   margin: 0;
 }
 
 .arrowIcon {
-  color: var(--color4);
+  color: white;
   transition: all 0.5s ease;
   display: flex;
   align-items: center;
@@ -92,14 +140,33 @@
   border-top: 1px solid rgba(114, 9, 183, 0.2);
 }
 
+.gifContainer {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.commandGif {
+  width: 100%;
+  height: auto;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  border-radius: 15px;
+  padding: 10px;
+}
+
 .commandDesc {
-  color: var(--foreground);
+  color: white;
   margin: 0 0 1rem 0;
   line-height: 1.6;
+  align-items: center;
 }
 
 .usage, .aliases, .examples {
   margin: 1rem 0;
+  color: white;
 }
 
 .usage code, .codeBlock {
@@ -143,7 +210,15 @@
   border: 1px solid var(--color2);
 }
 
-/* Responsividade */
+@media (max-width: 768px) {
+  .gifContainer {
+    margin: 0 -1rem 1.5rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
 @media (max-width: 640px) {
   .content {
     padding: 0 1rem;

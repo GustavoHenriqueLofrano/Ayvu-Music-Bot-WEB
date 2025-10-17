@@ -36,9 +36,10 @@ export default function Home() {
             <div className={styles.players}>
               <TextType
                 text={[
-                  'YouTube',
-                  'Spotify',
-                  'SoundCloud',
+                  '🎸 YouTube',
+                  '🎸 Spotify',
+                  '🎸 SoundCloud',
+                  'e mais!'
                 ]}
                 typingSpeed={100}
                 deletingSpeed={50}
