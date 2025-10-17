@@ -3,6 +3,7 @@ import {Sniglet as FontSniglet } from "next/font/google";
 import "./globals.css";
 import Header from "./home/components/header/header";
 import Footer from "./home/components/footer/footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const sniglet = FontSniglet({
   weight: '400',
@@ -27,6 +28,7 @@ export default function RootLayout({
         <Header/>
         {children}
         <Footer/>
+        <Analytics />
       </body>
     </html>
   );
