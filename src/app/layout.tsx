@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {Sniglet as FontSniglet } from "next/font/google";
 import "./globals.css";
 import Header from "./home/components/header/header";
-import Footer from "./home/components/footer/footer";
 import { Analytics } from "@vercel/analytics/next";
 
 const sniglet = FontSniglet({
@@ -15,6 +14,9 @@ const sniglet = FontSniglet({
 export const metadata: Metadata = {
   title: "Ayvu Music",
   description: "Ayvu Music",
+  icons: {
+    icon: "./logoMenor.png",
+  },
 };
 
 export default function RootLayout({
@@ -25,10 +27,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${sniglet.variable} font-sans`}>
+        <div className="mainContainer">
         <Header/>
         {children}
-        <Footer/>
         <Analytics />
+        </div>
       </body>
     </html>
   );

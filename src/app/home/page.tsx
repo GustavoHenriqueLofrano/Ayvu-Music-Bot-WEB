@@ -1,27 +1,27 @@
 import DarkVeil from "@/components/DarkVeil"
 import logo from '../../../public/logo.png'
 import Image from "next/image"
-import { FaDiscord} from "react-icons/fa"
+import { FaDiscord } from "react-icons/fa"
 import styles from './page.module.css'
 import Magnet from '@/components/Magnet'
 import TextType from '@/components/TextType';
+import Footer from "./components/footer/footer"
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.background}>
         <DarkVeil
-          hueShift={340}
-          scanlineIntensity={0.3}
-          speed={0.5}
-          warpAmount={1}
+          hueShift={350}
+          speed={0.8}
         />
       </div>
       <div className={styles.content}>
         <div className={styles.contentWrapper}>
           <div className={styles.mainContent}>
-              <Image src={logo} alt="Logo" width={400} style={{ width: '100%', maxWidth: '400px', height: 'auto' }} />
-
+            <div className={styles.logoImage}>
+              <Image src={logo} alt="Logo" style={{ width: '420px', height: 'auto', maxWidth: '100%' }} />
+            </div>
             <Magnet magnetStrength={12} padding={20} >
               <a href="https://discord.com/oauth2/authorize?client_id=1409491387006844928" style={{ textDecoration: 'none' }}>
                 <button className={styles.inviteButton}>
@@ -52,6 +52,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

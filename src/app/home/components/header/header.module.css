@@ -16,38 +16,24 @@
 
 .nav {
   display: flex;
-  gap: 2.7rem;
   font-size: 1.1rem;
   margin-right: 8%;
+  gap: 1.8rem;
 }
-
 .navLink {
+  margin-right: 1rem;
   color: white;
   opacity: 0.9;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
+
+}
+.navLink:hover {
+ color: white;
+ transform: translateY(-1px);
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ opacity: 1;
+ background: none;
 }
 
-
-.navLink:hover::after {
-  width: 100%;
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding: 1rem 5%;
-  }
-  
-  .logo a {
-    font-size: 1.5rem;
-  }
-  
-  .nav {
-    gap: 1.2rem;
-  }
-  
-  .navLink {
-    font-size: 0.9rem;
-  }
-}
