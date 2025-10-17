@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import styles from './page.module.css';
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
-import LightRays from '@/components/LightRays';
 
 const commands = [
   { 
@@ -26,7 +25,7 @@ const commands = [
   { 
     name: 'pause', 
     description: 'Pausa a reprodução', 
-    usage: '/pause ou botão ⏸⏯️',
+    usage: '/pause ou botão ⏯️',
     examples: ['/pause']
   },
   { 
@@ -57,7 +56,6 @@ export default function Commands() {
 
   return (
     <div className={styles.container}>
-      <LightRays className={styles.background}/>
       <div className={styles.content}>
         <div className={styles.commandsList}>
           {commands.map((cmd, index) => (

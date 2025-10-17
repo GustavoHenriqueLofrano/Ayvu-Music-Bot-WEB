@@ -158,6 +158,7 @@ const TextType = ({
     pauseDuration,
     textArray,
     currentTextIndex,
+    getRandomSpeed,
     loop,
     initialDelay,
     isVisible,
