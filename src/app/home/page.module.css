@@ -34,8 +34,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1450px;
   margin: 0 auto;
   padding: 0 20px;
   gap: 40px;
@@ -46,10 +46,9 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
+  gap: 20px;
   max-width: 45%;
-  padding: 2rem 0;
-  margin-right: 20%;
+  padding: 3rem 0;
 }
 
 .logoImage {
@@ -60,14 +59,8 @@
 }
 
 @keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
   50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0px);
+    transform: translateY(-6px);
   }
 }
 
@@ -111,7 +104,10 @@
 .inviteButton {
   color: black;
   padding: 8px;
-  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 8px;
   border-radius: 8px;
   background-color: white;
   cursor: pointer;
