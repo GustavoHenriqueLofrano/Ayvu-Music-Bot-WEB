@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import styles from './page.module.css';
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
-import DotGrid from '@/components/DotGrid';
 import Image from 'next/image';
 
 const commands = [
@@ -68,16 +67,6 @@ export default function Commands() {
   return (
     <div className={styles.container}>
       <div className={styles.dotGridContainer}>
-        <DotGrid 
-          dotSize={2}
-          gap={40}
-          baseColor="#3A0CA3"
-          activeColor="#4CC9F0"
-          proximity={150}
-          shockRadius={100}
-          shockStrength={5}
-          className={styles.dotGrid}
-        />
       </div>
       <div className={styles.content}>
         <div className={styles.commandsList}>
