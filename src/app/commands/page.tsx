@@ -18,7 +18,7 @@ const commands = [
       '/play https://www.youtube.com/playlist?list=...',
       '/play https://open.spotify.com/playlist/...'
     ],
-    gif: 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOThyMDdlbXJybWtsdWlreHkwYnR3ODFjYWk5ajY4c2NuZGhtb25hNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/EHA6M85tzhBY8k3SOb/giphy.gif',
+    gif: 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTN3OTdjbHlzOGZvd3RvbHdwbzk4Y2h4ajBpOHVyMzRxYjA3MWpzbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/USxxgiFKrAQ7XL8HGU/giphy.gif',
   },
   { 
     name: 'skip', 
@@ -36,7 +36,6 @@ const commands = [
     name: 'pause', 
     description: 'Pausa a reprodução', 
     usage: '/pause ou botão ⏯️',
-    examples: ['/pause'],
     gif: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFtYmVzMThhZThpcHNpanA5MXc5N2thNTV3bmdqeXFhczI2eG81ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WFo1U8AsEjeoNuPKU7/giphy.gif'
   },
   { 
@@ -53,9 +52,8 @@ const commands = [
   },
   { 
     name: 'loop', 
-    description: 'Ativa/desativa o loop da fila(2 modos, modo fila e modo música unica)', 
+    description: 'Ativa/desativa o loop da fila (2 modos, modo fila e modo música unica)', 
     usage: '/loop ou botão 🔂',
-    examples: ['/loop'],
     gif: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFtYmVzMThhZThpcHNpanA5MXc5N2thNTV3bmdqeXFhczI2eG81ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WFo1U8AsEjeoNuPKU7/giphy.gif'
   },
 ];  
