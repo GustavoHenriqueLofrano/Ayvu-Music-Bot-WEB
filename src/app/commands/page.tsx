@@ -23,7 +23,7 @@ const commands = [
     name: 'skip', 
     description: 'Pula a música atual', 
     usage: '/skip ou botão ⏩',
-    gif: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFtYmVzMThhZThpcHNpanA5MXc5N2thNTV3bmdqeXFhczI2eG81ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WFo1U8AsEjeoNuPKU7/giphy.gif'
+    gif: 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdG12MGNtaWVsdDZvODZncmgyajEwMzZ3a29iaGVkNW0zZzRuMW56biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZYzmMg3dx7v74uyOqW/giphy.gif'
   },
   { 
     name: 'stop', 
@@ -65,6 +65,7 @@ const commands = [
 
 export default function Commands() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   const toggleExpand = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -72,6 +73,51 @@ export default function Commands() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.videoBackground}>
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={styles.video}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'fill',
+            opacity: 1,
+          }}
+          onLoadedData={() => {
+            console.log('Vídeo carregado com sucesso!');
+            setIsVideoLoaded(true);
+            const video = document.querySelector('video');
+            if (video) {
+              video.play().catch(error => {
+                console.error('Erro ao reproduzir o vídeo:', error);
+              });
+            }
+          }}
+          onError={(e) => {
+            console.error('Erro ao carregar o vídeo:', e);
+            console.log('Caminho do vídeo:', '/51.mp4');
+            console.log('Elemento de vídeo:', e.target);
+            // Tenta carregar o vídeo de forma dinâmica
+            const video = document.querySelector('video');
+            if (video) {
+              const source = document.createElement('source');
+              source.src = '/51.mp4';
+              source.type = 'video/mp4';
+              video.appendChild(source);
+              video.load();
+            }
+          }}
+        >
+          <source src="/51.mp4" type="video/mp4" />
+          Seu navegador não suporta o elemento de vídeo.
+        </video>
+      </div>
       <div className={styles.content}>
         <div className={styles.commandsList}>
           {commands.map((cmd, index) => (

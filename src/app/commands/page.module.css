@@ -4,13 +4,14 @@
   color: white;
   position: relative;
   z-index: 1;
-  margin-top: 0;
+  margin: 0;
   overflow: hidden;
-  background: linear-gradient(#0a0a1a, black);
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(#0a0a1a, black);
 }
 
 .content {
@@ -54,8 +55,8 @@
 }
 
 .commandItem {
-  background: rgba(10, 10, 26, 0.7);
-  border: 1px solid grey;
+  background: black;
+  border: 1px solid rgba(255, 255, 255, 0.185);
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
@@ -69,6 +70,7 @@
   border-color: var(--color4);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: black;
 }
 
 .commandHeader {
@@ -76,10 +78,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: var(--color3);
+  background: rgba(97, 88, 88, 0.123);
   cursor: pointer;
   user-select: none;
 }
+.commandHeader:hover {
+  background: black;
+}
+
 
 .commandName {
   font-size: 1.1rem;
