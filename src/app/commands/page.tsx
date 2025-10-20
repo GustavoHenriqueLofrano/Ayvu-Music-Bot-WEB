@@ -55,6 +55,12 @@ const commands = [
     usage: '/loop ou botão 🔂',
     gif: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFtYmVzMThhZThpcHNpanA5MXc5N2thNTV3bmdqeXFhczI2eG81ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WFo1U8AsEjeoNuPKU7/giphy.gif'
   },
+  {
+    name: 'autoplay',
+    description: 'Ativa/desativa o autoplay. O autoplay toca música aleatórias com base na fila ou música adiciona, funciona com músicas do Spotify. Adicione mais músicas para aumentar a aleatoriedade.',
+    usage: '/autoplay ou botão 🔀',
+    gif: 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaXFtYmVzMThhZThpcHNpanA5MXc5N2thNTV3bmdqeXFhczI2eG81ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WFo1U8AsEjeoNuPKU7/giphy.gif'
+  }
 ];  
 
 export default function Commands() {
@@ -66,8 +72,6 @@ export default function Commands() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.dotGridContainer}>
-      </div>
       <div className={styles.content}>
         <div className={styles.commandsList}>
           {commands.map((cmd, index) => (
@@ -87,14 +91,16 @@ export default function Commands() {
                 <div className={styles.commandDetails}>
                   {cmd.gif && (
                     <div className={styles.gifContainer}>
-                      <Image
-                        src={cmd.gif}
-                        alt={`Demonstração do comando ${cmd.name}`}
-                        className={styles.commandGif}
-                        width={500}
-                        height={500}
-                        loading="lazy"
-                      />
+                      <div className={styles.gifWrapper}>
+                        <Image
+                          src={cmd.gif}
+                          alt={`Demonstração do comando ${cmd.name}`}
+                          className={styles.commandGif}
+                          width={800}
+                          height={450}
+                          quality={100}
+                        />
+                      </div>
                     </div>
                   )}
                   <p className={styles.commandDesc}>{cmd.description}</p>

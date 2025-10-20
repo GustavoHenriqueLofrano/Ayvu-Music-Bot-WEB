@@ -13,7 +13,7 @@ export default function Home() {
       <div className={styles.background}>
         <DarkVeil
           hueShift={350}
-          speed={0.8}
+          speed={0.9}
         />
       </div>
       <div className={styles.content}>
