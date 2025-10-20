@@ -1,7 +1,7 @@
 "use client";
 import styles from './footer.module.css';
 import Link from 'next/link';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -14,6 +14,14 @@ const Footer = () => {
                     rel="noopener noreferrer"
                 >
                     <FaGithub size={25} />
+                </Link>
+                <Link 
+                    href="https://www.linkedin.com/in/gustavohenriquelofrano/"
+                    className={styles.iconLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <FaLinkedin size={23} />  
                 </Link>
             </div>
 

@@ -6,6 +6,7 @@ import styles from './page.module.css'
 import Magnet from '@/components/Magnet'
 import TextType from '@/components/TextType';
 import Footer from "./components/footer/footer"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <div className={styles.background}>
         <DarkVeil
           hueShift={350}
-          speed={0.9}
+          speed={1.0}
         />
       </div>
       <div className={styles.content}>
@@ -22,13 +23,13 @@ export default function Home() {
             <div className={styles.logoImage}>
               <Image src={logo} alt="Logo" style={{ width: '420px', height: 'auto', maxWidth: '100%' }} />
             </div>
-            <Magnet magnetStrength={12} padding={20} >
-              <a href="https://discord.com/oauth2/authorize?client_id=1409491387006844928" style={{ textDecoration: 'none' }}>
+            <Magnet magnetStrength={10} padding={20} >
+              <Link href="https://discord.com/oauth2/authorize?client_id=1409491387006844928" style={{ textDecoration: 'none' }}>
                 <button className={styles.inviteButton}>
                   <FaDiscord className={styles.discordIcon} />
                   <span>Convidar</span>
                 </button>
-              </a>
+              </Link>
             </Magnet>
           </div>
           <div className={styles.textContent}>

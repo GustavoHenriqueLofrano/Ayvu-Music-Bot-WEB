@@ -6,7 +6,7 @@
   z-index: 1;
   margin-top: 0;
   overflow: hidden;
-  background: linear-gradient(to bottom,#dad1d54f , #0a0a1a 100%);
+  background: linear-gradient(#0a0a1a, black);
   transform: translateZ(0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
